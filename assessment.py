@@ -79,11 +79,16 @@ def is_hometown(town):
 
     return town == HOMETOWN
 
+print is_hometown("San Francisco")
+print is_hometown("Orlando")
+
 
 def concatenate_name(first, last):
     """Returns first and last name in one string"""
 
     return first + " " + last
+
+print concatenate_name("Blerina", "Aliaj")
 
 
 def same_place(town, first, last):
@@ -97,6 +102,8 @@ def same_place(town, first, last):
         print "Hi {}, where are you from?".format(
             concatenate_name(first, last))
 
+print same_place("San Francisco", "Blerina", "Aliaj")
+print same_place("Orlando", "Blerina", "Aliaj")
 
 ###############################################################################
 
@@ -206,7 +213,6 @@ def calculate_price(base_price, state, tax=0.05):
 #>>> outer("Balloonicorn")
 #('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
 
-
 ###############################################################################
 
 def append_list(any_list, *args):
@@ -217,6 +223,9 @@ def append_list(any_list, *args):
 
     return any_list
 
+my_list = [4, 8, "blah blah", "orange", 42]
+print append_list(my_list, "ha ha", 10, 3.5, "gazillion")
+
 
 def nest_function(word):
     """Function with nested inner function. Returns input string times 3"""
@@ -226,6 +235,9 @@ def nest_function(word):
 
     return word, inner_function()
 
+print nest_function("Balloonicorn")
+print nest_function('Ha')
+print nest_function("*")
 
 ###############################################################################
 
